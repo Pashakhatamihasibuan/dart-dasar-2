@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   // if
   var a = 10;
@@ -28,5 +30,40 @@ void main() {
     print("C");
   } else {
     print("D");
+  }
+
+  // Switch Case
+  stdout.write('Masukkan Nomor hari (1 untuk Senin, 2 untuk Selasa, dst.) : ');
+  int? hari =
+      int.tryParse(stdin.readLineSync()!); // hari = stdin.readLineSync();
+
+  if (hari == null || hari < 1 || hari > 7) {
+    print('Input tidak valid. Masukkan angka antara 1 sampai 7.');
+  } else {
+    switch (hari) {
+      case 1:
+        print('Senin');
+        break;
+      case 2:
+        print('Selasa');
+        break;
+      case 3:
+        print('Rabu');
+        break;
+      case 4:
+        print('Kamis');
+        break;
+      case 5:
+        print('Jumat');
+        break;
+      case 6:
+        print('Sabtu');
+        break;
+      case 7:
+        print('Mingggu');
+        break;
+      default:
+        print('Input tidak valid.');
+    }
   }
 }
