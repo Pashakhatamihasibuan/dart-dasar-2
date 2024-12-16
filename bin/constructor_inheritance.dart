@@ -41,4 +41,5 @@ class MacBook extends Laptop {
 
 void main(List<String> args) {
   var typeLaptop = MacBook();
+  print(typeLaptop);
 }
